@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Love Card</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffe6f2;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .input-box {
+        background: #fff;
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px rgba(255, 0, 120, 0.2);
+    }
+
+    input {
+        width: 90%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid #ff66b3;
+        font-size: 16px;
+        outline: none;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 12px 25px;
+        background: #ff66b3;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #card {
+        display: none;
+        background: #ff99cc;
+        padding: 25px;
+        margin-top: 20px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 18px;
+        box-shadow: 0px 0px 12px rgba(255, 0, 170, 0.3);
+        animation: fade 0.7s ease-in-out;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
+
+</head>
+
+<body>
+
+<h2>💗 Enter Your Name To See Your Love Card 💗</h2>
+
+<div class="input-box">
+    <input type="text" id="girlName" placeholder="Enter her name...">
+    <br>
+    <button onclick="showCard()">Show Card</button>
+</div>
+
+<div id="card">
+    <h3 id="nameLine"></h3>
+    <p>You make my world softer, brighter, and full of love. i know m tumhe tang krta bahut bs khud ko leke bahut insecure hu yaar i wish tum bs khush rho  dukhi nhi dekh sakta aapko kabhi hurt nhi krna chahta bs pyarr krte rehna chata life time sath rehna chata aur humesha khush rakhna chata tumse share krta coz you are the closest to me tumse jyada close koi nhi h mere lie pls maaf krdo kal call bhi krunga frr mera baccha itna mat socho meko adat h ye sab tackle krne ki yk jab tum pehli baar milithi tabhi terese pyaar hogya tha sach btau to but whi na gand m dum na hua btane ka pr dheere we got close jab tumne kha tha ki tumhelagaa majak h to my efforts meko sirf is baat ka dukh hua tha ki kabhi tumhare sath nhi ho paunga but baadme we wnt together har roz har roz i love to takk to you start tumse end bhi tumpe i want this to never end yk bs m nhi chahta meri wajah s tumhe kuch issue ho love you sorry for making you feel sad</p>
+    <p>Forever yours 💖</p>
+</div>
+
+<script>
+function showCard() {
+    let name = document.getElementById("girlName").value.trim();
+
+    if (name === "") {
+        alert("Enter her name first!");
+        return;
+    }
+
+    document.getElementById("nameLine").innerHTML = "For " + name + " ❤️";
+    document.getElementById("card").style.display = "block";
+}
+</script>
+
+</body>
+</html>
